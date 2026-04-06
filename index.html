@@ -1,0 +1,1291 @@
+<!doctype html>
+<html lang="ro">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Uzinex — Industrial Equipment Solutions</title>
+<meta name="description" content="Echipamente industriale, cupe excavator, atașamente și soluții de leasing pentru profesioniști." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@300;400;500;600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        fontFamily: {
+          sans: ['Space Grotesk', 'Inter', 'system-ui', 'sans-serif'],
+          mono: ['IBM Plex Mono', 'monospace'],
+          serif: ['Space Grotesk', 'system-ui', 'sans-serif'],
+        },
+        colors: {
+          ink: {
+            50:  '#f7f7f8',
+            100: '#eeeef0',
+            200: '#d9d9de',
+            300: '#b8b8c0',
+            400: '#8a8a95',
+            500: '#5f5f6b',
+            600: '#42424c',
+            700: '#2d2d35',
+            800: '#1c1c22',
+            900: '#0e0e12',
+          },
+          uzx: {
+            blue:   '#1e6bb8',
+            blue2:  '#155290',
+            orange: '#f5851f',
+            orange2:'#e06d00',
+          }
+        },
+        letterSpacing: { tightest: '-0.04em' }
+      }
+    }
+  }
+</script>
+<style>
+  html { scroll-behavior: smooth; }
+  body { background:#fff; color:#0e0e12; -webkit-font-smoothing:antialiased; font-feature-settings:"ss01","cv11"; }
+  .serif { font-family:'Space Grotesk',system-ui,sans-serif; font-weight:500; letter-spacing:-0.02em; }
+  .mono  { font-family:'IBM Plex Mono',monospace; }
+  .italic { font-style: normal; font-weight: 300; color:#8a8a95; }
+  body { font-family:'Inter',system-ui,sans-serif; }
+  .container-x { max-width:1280px; margin:0 auto; padding-left:1.5rem; padding-right:1.5rem; }
+  .hairline { border-color:#eeeef0; }
+  .num { font-variant-numeric:tabular-nums; }
+  ::selection { background:#0e0e12; color:#fff; }
+  .underline-link { background-image:linear-gradient(currentColor,currentColor); background-size:100% 1px; background-repeat:no-repeat; background-position:0 100%; }
+  details > summary { list-style:none; cursor:pointer; }
+  details > summary::-webkit-details-marker { display:none; }
+  details[open] .qa-icon { transform:rotate(45deg); }
+  .qa-icon { transition:transform .3s; }
+  @keyframes scroll-x {
+    0%   { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+  .scroll-track { animation: scroll-x 40s linear infinite; }
+
+  /* Vertical marquee for testimonials */
+  @keyframes scroll-y {
+    0%   { transform: translateY(0); }
+    100% { transform: translateY(-50%); }
+  }
+  .scroll-y-slow { animation: scroll-y 50s linear infinite; }
+  .scroll-y-mid  { animation: scroll-y 40s linear infinite; }
+  .scroll-y-fast { animation: scroll-y 60s linear infinite; }
+  .testimonial-mask {
+    mask-image: linear-gradient(to bottom, transparent 0%, black 12%, black 88%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 12%, black 88%, transparent 100%);
+  }
+  .scroll-col:hover { animation-play-state: paused; }
+
+  /* Hero blueprint animations */
+  @keyframes spin       { 0% { transform: rotate(0deg); }   100% { transform: rotate(360deg); } }
+  @keyframes spin-rev   { 0% { transform: rotate(0deg); }   100% { transform: rotate(-360deg); } }
+  .gear-spin-slow     { animation: spin 60s linear infinite; transform-origin: center; transform-box: fill-box; }
+  .gear-spin-fast     { animation: spin 25s linear infinite; transform-origin: center; transform-box: fill-box; }
+  .gear-spin-fast-rev { animation: spin-rev 35s linear infinite; transform-origin: center; transform-box: fill-box; }
+
+  @keyframes scanLine {
+    0%   { top: 0%;  opacity: 0; }
+    10%  { opacity: 1; }
+    90%  { opacity: 1; }
+    100% { top: 100%; opacity: 0; }
+  }
+  .scan-line { animation: scanLine 8s ease-in-out infinite; }
+
+  @keyframes dashFlow {
+    0%   { stroke-dashoffset: 0; }
+    100% { stroke-dashoffset: -100; }
+  }
+  .dash-flow { animation: dashFlow 4s linear infinite; }
+
+  @keyframes pulseDot {
+    0%, 100% { opacity: 0.3; transform: scale(1); }
+    50%      { opacity: 1;   transform: scale(2); }
+  }
+  .pulse-dot { animation: pulseDot 3s ease-in-out infinite; transform-origin: center; transform-box: fill-box; }
+
+  @media (prefers-reduced-motion: reduce) {
+    .gear-spin-slow, .gear-spin-fast, .gear-spin-fast-rev,
+    .scan-line, .dash-flow, .pulse-dot,
+    .scroll-y-slow, .scroll-y-mid, .scroll-y-fast { animation: none; }
+  }
+</style>
+</head>
+<body class="font-sans">
+
+<!-- ─── ANNOUNCEMENT BAR ─── -->
+<div class="bg-ink-900 text-ink-100 text-xs">
+  <div class="container-x flex items-center justify-between py-2.5">
+    <span class="opacity-70">Sediu central: București · Punct de lucru Otopeni · Livrare națională</span>
+    <div class="hidden md:flex items-center gap-5 opacity-70">
+      <a href="tel:+40000000000" class="hover:opacity-100">+40 21 000 0000</a>
+      <span class="text-ink-500">|</span>
+      <a href="#">RO</a><span class="text-ink-500">/</span><a href="#" class="opacity-50">EN</a>
+    </div>
+  </div>
+</div>
+
+<!-- ─── HEADER ─── -->
+<header class="sticky top-0 z-50 bg-white/85 backdrop-blur border-b hairline">
+  <div class="container-x flex items-center justify-between h-20">
+    <a href="#" class="flex items-center gap-3">
+      <!-- UZINEX LOGO RECREATION -->
+      <svg viewBox="0 0 320 70" class="h-9 w-auto" xmlns="http://www.w3.org/2000/svg" aria-label="Uzinex">
+        <g fill="#1e6bb8">
+          <!-- U -->
+          <path d="M0 4 L18 4 L18 38 Q18 46 26 46 Q34 46 34 38 L34 4 L52 4 L52 39 Q52 60 26 60 Q0 60 0 39 Z"/>
+          <!-- Z -->
+          <path d="M58 4 L106 4 L106 16 L80 46 L106 46 L106 58 L58 58 L58 46 L84 16 L58 16 Z"/>
+          <!-- I -->
+          <rect x="112" y="4" width="16" height="54"/>
+          <!-- N -->
+          <path d="M134 4 L150 4 L168 32 L168 4 L184 4 L184 58 L168 58 L150 30 L150 58 L134 58 Z"/>
+          <!-- E (with notches like the original) -->
+          <path d="M190 4 L230 4 L230 16 L206 16 L206 24 L226 24 L226 36 L206 36 L206 46 L230 46 L230 58 L190 58 Z"/>
+        </g>
+        <!-- X (orange) -->
+        <g fill="#f5851f">
+          <path d="M236 4 L254 4 L264 22 L274 4 L292 4 L274 30 L294 58 L276 58 L264 38 L252 58 L234 58 L254 30 Z"/>
+        </g>
+        <!-- tagline -->
+        <text x="0" y="69" font-family="Inter, sans-serif" font-size="9" font-weight="400" fill="#1e6bb8" letter-spacing="0.5">
+          utilaje &amp; echipamente pentru industrie
+        </text>
+      </svg>
+    </a>
+    <nav class="hidden lg:flex items-center gap-9 text-sm text-ink-700">
+      <a href="#catalog" class="hover:text-ink-900">Catalog tehnic</a>
+      <a href="#solutii" class="hover:text-ink-900">Soluții recomandate</a>
+      <a href="#testimoniale" class="hover:text-ink-900">Clienți</a>
+      <a href="#qa" class="hover:text-ink-900">Întrebări frecvente</a>
+      <a href="#contact" class="hover:text-ink-900">Contact</a>
+    </nav>
+    <div class="flex items-center gap-3">
+      <a href="#" class="hidden md:inline text-sm text-ink-700 hover:text-ink-900">Autentificare</a>
+      <a href="#contact" class="bg-uzx-orange hover:bg-uzx-orange2 text-white text-sm px-5 py-2.5 transition">Discută cu un inginer</a>
+    </div>
+  </div>
+</header>
+
+<!-- ════════════════════════════════════ -->
+<!-- HERO with VIDEO BACKGROUND            -->
+<!-- ════════════════════════════════════ -->
+<section class="relative overflow-hidden border-b hairline bg-ink-900 text-white">
+  <!-- Animated engineering blueprint background -->
+  <div class="absolute inset-0 w-full h-full pointer-events-none overflow-hidden">
+
+    <!-- Blueprint base color -->
+    <div class="absolute inset-0" style="background:radial-gradient(ellipse at 70% 30%, #122544 0%, #0a1424 50%, #050a14 100%);"></div>
+
+    <!-- Animated grid -->
+    <svg class="absolute inset-0 w-full h-full opacity-[0.18]" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <pattern id="bp-grid-sm" width="40" height="40" patternUnits="userSpaceOnUse">
+          <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#7fb0ff" stroke-width="0.4"/>
+        </pattern>
+        <pattern id="bp-grid-lg" width="200" height="200" patternUnits="userSpaceOnUse">
+          <path d="M 200 0 L 0 0 0 200" fill="none" stroke="#7fb0ff" stroke-width="1"/>
+        </pattern>
+      </defs>
+      <rect width="100%" height="100%" fill="url(#bp-grid-sm)"/>
+      <rect width="100%" height="100%" fill="url(#bp-grid-lg)"/>
+    </svg>
+
+    <!-- Scanning line top→bottom -->
+    <div class="absolute inset-x-0 h-px scan-line" style="background:linear-gradient(90deg, transparent, rgba(127,176,255,0.8), transparent);"></div>
+
+    <!-- Animated gears + technical elements -->
+    <svg viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice" class="absolute inset-0 w-full h-full opacity-30">
+      <defs>
+        <radialGradient id="gear-grad" cx="0.5" cy="0.5" r="0.5">
+          <stop offset="0%" stop-color="#7fb0ff" stop-opacity="0.6"/>
+          <stop offset="100%" stop-color="#7fb0ff" stop-opacity="0.1"/>
+        </radialGradient>
+      </defs>
+
+      <!-- BIG GEAR right -->
+      <g transform="translate(1200,420)" class="gear-spin-slow">
+        <g>
+          <circle r="180" fill="none" stroke="#7fb0ff" stroke-width="1.5" opacity="0.5"/>
+          <circle r="150" fill="none" stroke="#7fb0ff" stroke-width="1" opacity="0.4"/>
+          <circle r="40"  fill="none" stroke="#7fb0ff" stroke-width="2"/>
+          <circle r="8"   fill="#7fb0ff"/>
+          <!-- teeth -->
+          <g stroke="#7fb0ff" stroke-width="2" fill="none">
+            <line x1="0" y1="-180" x2="0" y2="-200"/>
+            <line x1="0" y1="180"  x2="0" y2="200"/>
+            <line x1="-180" y1="0" x2="-200" y2="0"/>
+            <line x1="180"  y1="0" x2="200"  y2="0"/>
+            <line x1="-127" y1="-127" x2="-141" y2="-141"/>
+            <line x1="127"  y1="-127" x2="141"  y2="-141"/>
+            <line x1="-127" y1="127"  x2="-141" y2="141"/>
+            <line x1="127"  y1="127"  x2="141"  y2="141"/>
+            <line x1="0" y1="-90" x2="0" y2="-110"/>
+            <line x1="0" y1="90"  x2="0" y2="110"/>
+            <line x1="-90" y1="0" x2="-110" y2="0"/>
+            <line x1="90"  y1="0" x2="110"  y2="0"/>
+          </g>
+          <!-- spokes -->
+          <line x1="-150" y1="0" x2="150" y2="0" stroke="#7fb0ff" stroke-width="1" opacity="0.6"/>
+          <line x1="0" y1="-150" x2="0" y2="150" stroke="#7fb0ff" stroke-width="1" opacity="0.6"/>
+          <line x1="-106" y1="-106" x2="106" y2="106" stroke="#7fb0ff" stroke-width="1" opacity="0.6"/>
+          <line x1="-106" y1="106" x2="106" y2="-106" stroke="#7fb0ff" stroke-width="1" opacity="0.6"/>
+        </g>
+      </g>
+
+      <!-- MEDIUM GEAR -->
+      <g transform="translate(1430,200)" class="gear-spin-fast-rev">
+        <g>
+          <circle r="90" fill="none" stroke="#7fb0ff" stroke-width="1.5" opacity="0.6"/>
+          <circle r="20" fill="none" stroke="#7fb0ff" stroke-width="2"/>
+          <circle r="4"  fill="#7fb0ff"/>
+          <g stroke="#7fb0ff" stroke-width="2">
+            <line x1="0" y1="-90" x2="0" y2="-105"/>
+            <line x1="0" y1="90"  x2="0" y2="105"/>
+            <line x1="-90" y1="0" x2="-105" y2="0"/>
+            <line x1="90"  y1="0" x2="105"  y2="0"/>
+            <line x1="-64" y1="-64" x2="-74" y2="-74"/>
+            <line x1="64"  y1="-64" x2="74"  y2="-74"/>
+            <line x1="-64" y1="64"  x2="-74" y2="74"/>
+            <line x1="64"  y1="64"  x2="74"  y2="74"/>
+          </g>
+          <line x1="-90" y1="0" x2="90" y2="0" stroke="#7fb0ff" stroke-width="0.8" opacity="0.5"/>
+          <line x1="0" y1="-90" x2="0" y2="90" stroke="#7fb0ff" stroke-width="0.8" opacity="0.5"/>
+        </g>
+      </g>
+
+      <!-- SMALL GEAR -->
+      <g transform="translate(1090,200)" class="gear-spin-fast">
+        <g>
+          <circle r="55" fill="none" stroke="#7fb0ff" stroke-width="1.5" opacity="0.6"/>
+          <circle r="12" fill="none" stroke="#7fb0ff" stroke-width="1.5"/>
+          <circle r="3"  fill="#7fb0ff"/>
+          <g stroke="#7fb0ff" stroke-width="1.5">
+            <line x1="0" y1="-55" x2="0" y2="-65"/>
+            <line x1="0" y1="55"  x2="0" y2="65"/>
+            <line x1="-55" y1="0" x2="-65" y2="0"/>
+            <line x1="55"  y1="0" x2="65"  y2="0"/>
+            <line x1="-39" y1="-39" x2="-46" y2="-46"/>
+            <line x1="39"  y1="-39" x2="46"  y2="-46"/>
+            <line x1="-39" y1="39"  x2="-46" y2="46"/>
+            <line x1="39"  y1="39"  x2="46"  y2="46"/>
+          </g>
+        </g>
+      </g>
+
+      <!-- Technical schematic lines bottom-left -->
+      <g stroke="#7fb0ff" stroke-width="1" fill="none" opacity="0.4">
+        <path d="M 80 700 L 280 700 L 280 600 L 480 600" stroke-dasharray="4 4" class="dash-flow"/>
+        <circle cx="80"  cy="700" r="4" fill="#7fb0ff"/>
+        <circle cx="280" cy="600" r="4" fill="#7fb0ff"/>
+        <circle cx="480" cy="600" r="4" fill="#7fb0ff"/>
+        <text x="90" y="690" font-family="IBM Plex Mono" font-size="11" fill="#7fb0ff" opacity="0.7">NODE_01</text>
+        <text x="290" y="590" font-family="IBM Plex Mono" font-size="11" fill="#7fb0ff" opacity="0.7">CTRL_HUB</text>
+        <text x="490" y="590" font-family="IBM Plex Mono" font-size="11" fill="#7fb0ff" opacity="0.7">OUTPUT</text>
+      </g>
+
+      <!-- Crosshair top-left -->
+      <g stroke="#7fb0ff" stroke-width="1" fill="none" opacity="0.5">
+        <circle cx="200" cy="200" r="40"/>
+        <circle cx="200" cy="200" r="60" stroke-dasharray="2 4"/>
+        <line x1="140" y1="200" x2="260" y2="200"/>
+        <line x1="200" y1="140" x2="200" y2="260"/>
+        <text x="270" y="205" font-family="IBM Plex Mono" font-size="10" fill="#7fb0ff" opacity="0.7">SCAN_AREA</text>
+      </g>
+
+      <!-- Pulsing dots representing data flow -->
+      <circle cx="300"  cy="450" r="3" fill="#7fb0ff" class="pulse-dot"/>
+      <circle cx="600"  cy="350" r="3" fill="#7fb0ff" class="pulse-dot" style="animation-delay:.7s"/>
+      <circle cx="850"  cy="500" r="3" fill="#7fb0ff" class="pulse-dot" style="animation-delay:1.4s"/>
+      <circle cx="1100" cy="700" r="3" fill="#7fb0ff" class="pulse-dot" style="animation-delay:2.1s"/>
+      <circle cx="500"  cy="800" r="3" fill="#7fb0ff" class="pulse-dot" style="animation-delay:.3s"/>
+
+      <!-- Coordinate annotations -->
+      <g font-family="IBM Plex Mono" font-size="9" fill="#7fb0ff" opacity="0.5">
+        <text x="20" y="30">X: 0000.000</text>
+        <text x="20" y="50">Y: 0000.000</text>
+        <text x="20" y="70">Z: +0125.40</text>
+      </g>
+    </svg>
+
+    <!-- Vignette overlays for legibility -->
+    <div class="absolute inset-0" style="background:linear-gradient(180deg, rgba(5,10,20,0.45) 0%, rgba(5,10,20,0.7) 70%, rgba(5,10,20,0.95) 100%);"></div>
+    <div class="absolute inset-0" style="background:linear-gradient(90deg, rgba(5,10,20,0.85) 0%, rgba(5,10,20,0.45) 45%, rgba(5,10,20,0.1) 100%);"></div>
+  </div>
+
+  <div class="container-x pt-32 lg:pt-40 pb-24 grid lg:grid-cols-12 gap-12 relative z-10">
+    <div class="lg:col-span-8">
+      <div class="flex items-center gap-3 text-xs uppercase tracking-[0.2em] text-ink-300 mb-10 mono">
+        <span class="w-8 h-px bg-ink-500"></span>
+        <span>Furnizor industrial · 2003 — prezent</span>
+      </div>
+      <!-- Removed: stoc availability mentions -->
+      <!-- Engineer-led messaging instead -->
+
+      <h1 class="serif text-5xl md:text-6xl lg:text-[5.5rem] font-medium tracking-tightest leading-[0.92] text-white">
+        Echipamente și<br>
+        componente pentru<br>
+        <span class="italic text-ink-300 font-light">industria grea.</span>
+      </h1>
+      <p class="text-lg lg:text-xl text-ink-200 max-w-2xl mt-10 leading-relaxed">
+        Cupe de excavator, atașamente hidraulice, piese de uzură și soluții complete pentru flotele profesionale.
+        Producție internă, calitate certificată ISO 9001, livrare în toată România.
+      </p>
+      <div class="flex flex-wrap items-center gap-6 mt-10">
+        <a href="#catalog" class="bg-white hover:bg-ink-100 text-ink-900 text-sm px-7 py-4 transition flex items-center gap-3 group font-medium">
+          Vezi catalogul tehnic
+          <span class="group-hover:translate-x-1 transition">→</span>
+        </a>
+        <a href="#contact" class="text-sm text-white underline-link hover:text-ink-200">Solicită consultanță tehnică gratuită</a>
+      </div>
+    </div>
+
+    <div class="lg:col-span-4 lg:border-l border-white/15 lg:pl-12 flex flex-col justify-end">
+      <div class="space-y-8">
+        <div>
+          <div class="text-xs uppercase tracking-[0.2em] text-ink-400 mono">Intervenție fizică</div>
+          <div class="serif text-3xl text-white mt-1">sub 24 ore</div>
+        </div>
+        <div>
+          <div class="text-xs uppercase tracking-[0.2em] text-ink-400 mono">Echipă de ingineri</div>
+          <div class="serif text-3xl text-white mt-1">consultanță tehnică</div>
+        </div>
+        <div>
+          <div class="text-xs uppercase tracking-[0.2em] text-ink-400 mono">Garanție standard</div>
+          <div class="serif text-3xl text-white mt-1">60 luni</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- bottom REC indicator (subtle industrial detail) -->
+  <div class="absolute bottom-6 right-6 z-10 flex items-center gap-2 text-[10px] mono uppercase tracking-widest text-white/50">
+    <span class="w-1.5 h-1.5 rounded-full bg-red-500 animate-pulse"></span>
+    LIVE · UZX FACILITY
+  </div>
+</section>
+
+<!-- ════════════════════════════════════ -->
+<!-- AUTHORITY STRIP                       -->
+<!-- ════════════════════════════════════ -->
+<section class="border-b hairline bg-ink-50">
+  <div class="container-x grid grid-cols-2 lg:grid-cols-5 divide-x hairline">
+    <div class="py-12 px-4 lg:px-8">
+      <div class="serif text-5xl text-ink-900 num">+30</div>
+      <div class="text-xs uppercase tracking-wider text-ink-500 mt-3">Ani expertiză tehnică</div>
+    </div>
+    <div class="py-12 px-4 lg:px-8">
+      <div class="serif text-5xl text-ink-900 num">+500</div>
+      <div class="text-xs uppercase tracking-wider text-ink-500 mt-3">Soluții în portofoliu</div>
+    </div>
+    <div class="py-12 px-4 lg:px-8">
+      <div class="serif text-5xl text-ink-900 num">40+</div>
+      <div class="text-xs uppercase tracking-wider text-ink-500 mt-3">Industrii deservite</div>
+    </div>
+    <div class="py-12 px-4 lg:px-8">
+      <div class="serif text-5xl text-ink-900 num">100%</div>
+      <div class="text-xs uppercase tracking-wider text-ink-500 mt-3">Proiecte conforme UE & PNRR</div>
+    </div>
+    <div class="py-12 px-4 lg:px-8 col-span-2 lg:col-span-1">
+      <div class="serif text-5xl text-ink-900 num">ISO 9001</div>
+      <div class="text-xs uppercase tracking-wider text-ink-500 mt-3">Certificare calitate</div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════ -->
+<!-- AUTHORITY: CERTIFICĂRI & PARTENERI    -->
+<!-- ════════════════════════════════════ -->
+<section class="border-b hairline py-20">
+  <div class="container-x">
+    <div class="grid lg:grid-cols-12 gap-12 items-start">
+      <div class="lg:col-span-4">
+        <div class="text-xs uppercase tracking-[0.2em] text-ink-400 mb-4">— Recunoaștere</div>
+        <h2 class="serif text-3xl md:text-4xl tracking-tightest text-ink-900 leading-tight">
+          Certificări și<br>parteneri industriali.
+        </h2>
+        <p class="text-ink-500 mt-6 leading-relaxed">
+          Lucrăm conform celor mai stricte standarde europene și suntem furnizori oficiali pentru cele mai importante grupuri din construcții.
+        </p>
+      </div>
+      <div class="lg:col-span-8">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-px bg-ink-200">
+          <div class="bg-white p-8 flex items-center justify-center serif text-xl text-ink-700">ISO 9001</div>
+          <div class="bg-white p-8 flex items-center justify-center serif text-xl text-ink-700">ISO 14001</div>
+          <div class="bg-white p-8 flex items-center justify-center serif text-xl text-ink-700">CE Mark</div>
+          <div class="bg-white p-8 flex items-center justify-center serif text-xl text-ink-700">EN 1090</div>
+          <div class="bg-white p-8 flex items-center justify-center serif text-xl text-ink-700">Hardox® Wearparts</div>
+          <div class="bg-white p-8 flex items-center justify-center serif text-xl text-ink-700">SSAB Partner</div>
+          <div class="bg-white p-8 flex items-center justify-center serif text-xl text-ink-700">EBRD</div>
+          <div class="bg-white p-8 flex items-center justify-center serif text-xl text-ink-700">PNRR</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Brand marquee -->
+    <div class="mt-20 pt-12 border-t hairline">
+      <div class="text-center text-xs uppercase tracking-[0.2em] text-ink-400 mb-10">Compatibili cu utilaje de la</div>
+      <div class="overflow-hidden">
+        <div class="flex gap-16 scroll-track" style="width:max-content;">
+          <span class="serif text-2xl text-ink-300 whitespace-nowrap">Caterpillar</span>
+          <span class="serif text-2xl text-ink-300 whitespace-nowrap">Komatsu</span>
+          <span class="serif text-2xl text-ink-300 whitespace-nowrap">Volvo CE</span>
+          <span class="serif text-2xl text-ink-300 whitespace-nowrap">Hitachi</span>
+          <span class="serif text-2xl text-ink-300 whitespace-nowrap">JCB</span>
+          <span class="serif text-2xl text-ink-300 whitespace-nowrap">Liebherr</span>
+          <span class="serif text-2xl text-ink-300 whitespace-nowrap">Case</span>
+          <span class="serif text-2xl text-ink-300 whitespace-nowrap">Doosan</span>
+          <span class="serif text-2xl text-ink-300 whitespace-nowrap">Hyundai CE</span>
+          <span class="serif text-2xl text-ink-300 whitespace-nowrap">Bobcat</span>
+          <!-- duplicate -->
+          <span class="serif text-2xl text-ink-300 whitespace-nowrap">Caterpillar</span>
+          <span class="serif text-2xl text-ink-300 whitespace-nowrap">Komatsu</span>
+          <span class="serif text-2xl text-ink-300 whitespace-nowrap">Volvo CE</span>
+          <span class="serif text-2xl text-ink-300 whitespace-nowrap">Hitachi</span>
+          <span class="serif text-2xl text-ink-300 whitespace-nowrap">JCB</span>
+          <span class="serif text-2xl text-ink-300 whitespace-nowrap">Liebherr</span>
+          <span class="serif text-2xl text-ink-300 whitespace-nowrap">Case</span>
+          <span class="serif text-2xl text-ink-300 whitespace-nowrap">Doosan</span>
+          <span class="serif text-2xl text-ink-300 whitespace-nowrap">Hyundai CE</span>
+          <span class="serif text-2xl text-ink-300 whitespace-nowrap">Bobcat</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════ -->
+<!-- CATALOG TEHNIC                        -->
+<!-- ════════════════════════════════════ -->
+<section id="catalog" class="border-b hairline py-24 lg:py-32">
+  <div class="container-x">
+    <div class="grid lg:grid-cols-12 gap-12 mb-20">
+      <div class="lg:col-span-5">
+        <div class="text-xs uppercase tracking-[0.2em] text-ink-400 mb-4">01 / Catalog tehnic</div>
+        <h2 class="serif text-4xl md:text-5xl lg:text-6xl tracking-tightest text-ink-900 leading-[0.95]">
+          Categorii din<br>portofoliul nostru.
+        </h2>
+      </div>
+      <div class="lg:col-span-6 lg:col-start-7 flex items-end">
+        <p class="text-ink-500 text-lg leading-relaxed">
+          Sute de soluții organizate pe categorii tehnice, cu specificații complete, fișe tehnice descărcabile și consultanță inginerească pentru fiecare proiect.
+        </p>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-ink-200 border-y border-ink-200">
+
+      <!-- 01 — Intralogistică -->
+      <a href="#" class="group bg-white hover:bg-ink-50 transition flex flex-col">
+        <div class="aspect-[16/10] overflow-hidden bg-ink-100">
+          <img src="https://images.unsplash.com/photo-1553413077-190dd305871c?w=900&q=80&auto=format&fit=crop"
+               alt="Motostivuitor în depozit industrial"
+               class="w-full h-full object-cover grayscale-[20%] group-hover:grayscale-0 group-hover:scale-105 transition duration-700">
+        </div>
+        <div class="p-10 flex flex-col flex-1">
+          <div class="flex items-center justify-between mb-6">
+            <div class="text-xs text-ink-400 num">01</div>
+            <span class="text-[10px] uppercase tracking-wider text-uzx-orange border border-uzx-orange/30 px-2 py-1">Recomandat</span>
+          </div>
+          <h3 class="serif text-2xl lg:text-3xl text-ink-900 leading-tight">Intralogistică &<br>manipulare mărfuri</h3>
+          <p class="text-sm text-ink-500 mt-4 leading-relaxed">Echipamente de transport, ridicare, tractare, poziționare și depozitare pentru fluxuri industriale.</p>
+          <ul class="text-xs text-ink-600 mt-6 space-y-1.5">
+            <li class="flex gap-2"><span class="text-ink-300">—</span> Motostivuitoare & electrostivuitoare</li>
+            <li class="flex gap-2"><span class="text-ink-300">—</span> Transpaleți manuali și electrici</li>
+            <li class="flex gap-2"><span class="text-ink-300">—</span> Sisteme de rafturi industriale</li>
+          </ul>
+          <div class="flex items-center justify-between mt-auto pt-8 border-t hairline">
+            <span class="text-xs text-ink-700 uppercase tracking-wider num">Configurabil</span>
+            <span class="text-xl text-uzx-blue group-hover:translate-x-1 transition">→</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- 02 — Prelucrare Laser & CNC -->
+      <a href="#" class="group bg-white hover:bg-ink-50 transition flex flex-col">
+        <div class="aspect-[16/10] overflow-hidden bg-ink-100">
+          <img src="https://images.unsplash.com/photo-1565043666747-69f6646db940?w=900&q=80&auto=format&fit=crop"
+               alt="Mașină CNC de prelucrare metalică"
+               class="w-full h-full object-cover grayscale-[20%] group-hover:grayscale-0 group-hover:scale-105 transition duration-700">
+        </div>
+        <div class="p-10 flex flex-col flex-1">
+          <div class="flex items-center justify-between mb-6">
+            <div class="text-xs text-ink-400 num">02</div>
+            <span class="text-[10px] uppercase tracking-wider text-uzx-orange border border-uzx-orange/30 px-2 py-1">Premium</span>
+          </div>
+          <h3 class="serif text-2xl lg:text-3xl text-ink-900 leading-tight">Prelucrare laser<br>& CNC de precizie</h3>
+          <p class="text-sm text-ink-500 mt-4 leading-relaxed">Soluții de debitare laser, sudură de precizie și marcare industrială pentru linii de producție intensivă.</p>
+          <ul class="text-xs text-ink-600 mt-6 space-y-1.5">
+            <li class="flex gap-2"><span class="text-ink-300">—</span> Mașini de tăiere laser fibră</li>
+            <li class="flex gap-2"><span class="text-ink-300">—</span> Centre de prelucrare CNC</li>
+            <li class="flex gap-2"><span class="text-ink-300">—</span> Strunguri și freze numerice</li>
+          </ul>
+          <div class="flex items-center justify-between mt-auto pt-8 border-t hairline">
+            <span class="text-xs text-ink-700 uppercase tracking-wider num">La cerere</span>
+            <span class="text-xl text-uzx-blue group-hover:translate-x-1 transition">→</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- 03 — Robotică & Automatizare -->
+      <a href="#" class="group bg-white hover:bg-ink-50 transition flex flex-col">
+        <div class="aspect-[16/10] overflow-hidden bg-ink-100">
+          <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=900&q=80&auto=format&fit=crop"
+               alt="Braț robotic industrial"
+               class="w-full h-full object-cover grayscale-[20%] group-hover:grayscale-0 group-hover:scale-105 transition duration-700">
+        </div>
+        <div class="p-10 flex flex-col flex-1">
+          <div class="flex items-center justify-between mb-6">
+            <div class="text-xs text-ink-400 num">03</div>
+            <span class="text-[10px] uppercase tracking-wider text-uzx-orange border border-uzx-orange/30 px-2 py-1">Industrie 4.0</span>
+          </div>
+          <h3 class="serif text-2xl lg:text-3xl text-ink-900 leading-tight">Robotică &<br>automatizare fluxuri</h3>
+          <p class="text-sm text-ink-500 mt-4 leading-relaxed">Brațe robotice, celule de paletizare și linii automatizate care reduc costurile operaționale și eroarea umană.</p>
+          <ul class="text-xs text-ink-600 mt-6 space-y-1.5">
+            <li class="flex gap-2"><span class="text-ink-300">—</span> Brațe robotice 6 axe</li>
+            <li class="flex gap-2"><span class="text-ink-300">—</span> Celule de paletizare</li>
+            <li class="flex gap-2"><span class="text-ink-300">—</span> Sisteme de inspecție vizuală</li>
+          </ul>
+          <div class="flex items-center justify-between mt-auto pt-8 border-t hairline">
+            <span class="text-xs text-ink-700 uppercase tracking-wider num">Custom & turnkey</span>
+            <span class="text-xl text-uzx-blue group-hover:translate-x-1 transition">→</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- 04 — Utilaje Grele -->
+      <a href="#" class="group bg-white hover:bg-ink-50 transition flex flex-col">
+        <div class="aspect-[16/10] overflow-hidden bg-ink-100">
+          <img src="https://images.unsplash.com/photo-1517089596392-fb9a9033e05b?w=900&q=80&auto=format&fit=crop"
+               alt="Excavator pe șantier"
+               class="w-full h-full object-cover grayscale-[20%] group-hover:grayscale-0 group-hover:scale-105 transition duration-700">
+        </div>
+        <div class="p-10 flex flex-col flex-1">
+          <div class="flex items-center justify-between mb-6">
+            <div class="text-xs text-ink-400 num">04</div>
+            <span class="text-[10px] uppercase tracking-wider text-uzx-orange border border-uzx-orange/30 px-2 py-1">Heavy duty</span>
+          </div>
+          <h3 class="serif text-2xl lg:text-3xl text-ink-900 leading-tight">Utilaje grele &<br>infrastructură</h3>
+          <p class="text-sm text-ink-500 mt-4 leading-relaxed">Soluții robuste pentru șantiere civile, proiecte de infrastructură, energie și exploatări miniere.</p>
+          <ul class="text-xs text-ink-600 mt-6 space-y-1.5">
+            <li class="flex gap-2"><span class="text-ink-300">—</span> Excavatoare & macarale</li>
+            <li class="flex gap-2"><span class="text-ink-300">—</span> Cupe, lame și atașamente</li>
+            <li class="flex gap-2"><span class="text-ink-300">—</span> Echipamente energetice</li>
+          </ul>
+          <div class="flex items-center justify-between mt-auto pt-8 border-t hairline">
+            <span class="text-xs text-ink-700 uppercase tracking-wider num">Heavy duty</span>
+            <span class="text-xl text-uzx-blue group-hover:translate-x-1 transition">→</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- 05 — Piese de schimb -->
+      <a href="#" class="group bg-white hover:bg-ink-50 transition flex flex-col">
+        <div class="aspect-[16/10] overflow-hidden bg-ink-100">
+          <img src="https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=900&q=80&auto=format&fit=crop"
+               alt="Piese mecanice industriale"
+               class="w-full h-full object-cover grayscale-[20%] group-hover:grayscale-0 group-hover:scale-105 transition duration-700">
+        </div>
+        <div class="p-10 flex flex-col flex-1">
+          <div class="flex items-center justify-between mb-6">
+            <div class="text-xs text-ink-400 num">05</div>
+            <span class="text-[10px] uppercase tracking-wider text-uzx-orange border border-uzx-orange/30 px-2 py-1">Catalog extins</span>
+          </div>
+          <h3 class="serif text-2xl lg:text-3xl text-ink-900 leading-tight">Piese de schimb<br>& consumabile</h3>
+          <p class="text-sm text-ink-500 mt-4 leading-relaxed">Identificăm și aducem rapid piesele de care ai nevoie. Minimizăm timpii de staționare ai utilajelor tale.</p>
+          <ul class="text-xs text-ink-600 mt-6 space-y-1.5">
+            <li class="flex gap-2"><span class="text-ink-300">—</span> Piese OEM și aftermarket</li>
+            <li class="flex gap-2"><span class="text-ink-300">—</span> Filtre, uleiuri, lubrifianți</li>
+            <li class="flex gap-2"><span class="text-ink-300">—</span> Kituri uzură & întreținere</li>
+          </ul>
+          <div class="flex items-center justify-between mt-auto pt-8 border-t hairline">
+            <span class="text-xs text-ink-700 uppercase tracking-wider num">OEM & aftermarket</span>
+            <span class="text-xl text-uzx-blue group-hover:translate-x-1 transition">→</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- 06 — Service -->
+      <a href="#" class="group bg-white hover:bg-ink-50 transition flex flex-col">
+        <div class="aspect-[16/10] overflow-hidden bg-ink-100">
+          <img src="https://images.unsplash.com/photo-1530124566582-a618bc2615dc?w=900&q=80&auto=format&fit=crop"
+               alt="Tehnician service industrial"
+               class="w-full h-full object-cover grayscale-[20%] group-hover:grayscale-0 group-hover:scale-105 transition duration-700">
+        </div>
+        <div class="p-10 flex flex-col flex-1">
+          <div class="flex items-center justify-between mb-6">
+            <div class="text-xs text-ink-400 num">06</div>
+            <span class="text-[10px] uppercase tracking-wider text-uzx-orange border border-uzx-orange/30 px-2 py-1">Service</span>
+          </div>
+          <h3 class="serif text-2xl lg:text-3xl text-ink-900 leading-tight">Service tehnic<br>& mentenanță</h3>
+          <p class="text-sm text-ink-500 mt-4 leading-relaxed">Echipă de tehnicieni specializați, intervenții la fața locului și contracte de mentenanță preventivă.</p>
+          <ul class="text-xs text-ink-600 mt-6 space-y-1.5">
+            <li class="flex gap-2"><span class="text-ink-300">—</span> Punere în funcțiune & training</li>
+            <li class="flex gap-2"><span class="text-ink-300">—</span> Mentenanță preventivă</li>
+            <li class="flex gap-2"><span class="text-ink-300">—</span> Reparații în garanție</li>
+          </ul>
+          <div class="flex items-center justify-between mt-auto pt-8 border-t hairline">
+            <span class="text-xs text-ink-700 uppercase tracking-wider num">SLA dedicat</span>
+            <span class="text-xl text-uzx-blue group-hover:translate-x-1 transition">→</span>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <!-- Subcategory cloud -->
+    <div class="mt-16 pt-12 border-t hairline">
+      <div class="text-xs uppercase tracking-[0.2em] text-ink-400 mb-6 mono">— Subcategorii populare</div>
+      <div class="flex flex-wrap gap-2">
+        <a href="#" class="text-xs px-4 py-2 border hairline hover:border-uzx-blue hover:text-uzx-blue transition">Utilaje de construcții</a>
+        <a href="#" class="text-xs px-4 py-2 border hairline hover:border-uzx-blue hover:text-uzx-blue transition">Echipamente de ambalare</a>
+        <a href="#" class="text-xs px-4 py-2 border hairline hover:border-uzx-blue hover:text-uzx-blue transition">Etichetare & dozare</a>
+        <a href="#" class="text-xs px-4 py-2 border hairline hover:border-uzx-blue hover:text-uzx-blue transition">Echipamente de reciclare</a>
+        <a href="#" class="text-xs px-4 py-2 border hairline hover:border-uzx-blue hover:text-uzx-blue transition">Utilaje CNC</a>
+        <a href="#" class="text-xs px-4 py-2 border hairline hover:border-uzx-blue hover:text-uzx-blue transition">Strunguri</a>
+        <a href="#" class="text-xs px-4 py-2 border hairline hover:border-uzx-blue hover:text-uzx-blue transition">Mașini de prelucrare lemn</a>
+        <a href="#" class="text-xs px-4 py-2 border hairline hover:border-uzx-blue hover:text-uzx-blue transition">Mașini de tăiere laser</a>
+        <a href="#" class="text-xs px-4 py-2 border hairline hover:border-uzx-blue hover:text-uzx-blue transition">Inspecție industrială</a>
+        <a href="#" class="text-xs px-4 py-2 border hairline hover:border-uzx-blue hover:text-uzx-blue transition">Echipamente energetice</a>
+        <a href="#" class="text-xs px-4 py-2 border hairline hover:border-uzx-blue hover:text-uzx-blue transition">Motostivuitoare</a>
+        <a href="#" class="text-xs px-4 py-2 border hairline hover:border-uzx-blue hover:text-uzx-blue transition">Brațe robotice</a>
+        <a href="#" class="text-xs px-4 py-2 border hairline hover:border-uzx-blue hover:text-uzx-blue transition">Linii de paletizare</a>
+        <a href="#" class="text-xs px-4 py-2 border hairline hover:border-uzx-blue hover:text-uzx-blue transition">Macarale & elevatoare</a>
+      </div>
+    </div>
+
+    <div class="flex justify-center mt-16">
+      <a href="#" class="group inline-flex items-center gap-3 text-sm text-ink-700 hover:text-ink-900">
+        <span class="w-12 h-px bg-ink-300"></span>
+        Descarcă catalogul tehnic complet (PDF, 12 MB)
+        <span class="group-hover:translate-x-1 transition">↓</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════ -->
+<!-- SOLUȚII RECOMANDATE                   -->
+<!-- ════════════════════════════════════ -->
+<section id="solutii" class="border-b hairline py-24 lg:py-32 bg-ink-50">
+  <div class="container-x">
+    <div class="grid lg:grid-cols-12 gap-12 mb-20">
+      <div class="lg:col-span-6">
+        <div class="text-xs uppercase tracking-[0.2em] text-ink-400 mb-4">02 / Soluții tehnice</div>
+        <h2 class="serif text-4xl md:text-5xl lg:text-6xl tracking-tightest text-ink-900 leading-[0.95]">
+          Recomandări în<br>funcție de aplicație.
+        </h2>
+      </div>
+      <div class="lg:col-span-5 lg:col-start-8 flex items-end">
+        <p class="text-ink-500 text-lg leading-relaxed">
+          Selectează tipul de teren și aplicația, iar inginerii noștri îți recomandă combinația optimă de echipamente.
+        </p>
+      </div>
+    </div>
+
+    <!-- Solution cards: editorial style -->
+    <div class="space-y-px bg-ink-200">
+
+      <!-- SOLUTION 1 — Producție & manufactură -->
+      <div class="bg-white grid lg:grid-cols-12 gap-12 p-10 lg:p-16 items-center">
+        <div class="lg:col-span-3">
+          <div class="aspect-[4/3] overflow-hidden bg-ink-100">
+            <img src="https://images.unsplash.com/photo-1565043666747-69f6646db940?w=600&q=80&auto=format&fit=crop"
+                 alt="Linie de producție industrială cu CNC" class="w-full h-full object-cover grayscale-[30%]">
+          </div>
+        </div>
+        <div class="lg:col-span-1">
+          <div class="serif text-2xl text-ink-300 num">01</div>
+        </div>
+        <div class="lg:col-span-4">
+          <div class="text-xs uppercase tracking-[0.2em] text-ink-400 mb-3">Industrie</div>
+          <h3 class="serif text-3xl text-ink-900 leading-tight">Producție &<br>manufactură</h3>
+          <p class="text-ink-600 leading-relaxed mt-4">
+            Linii complete pentru fabrici de procesare metal, plastic și ansamble: debitare laser, prelucrare CNC, sudură robotizată și inspecție automată.
+          </p>
+          <ul class="mt-6 space-y-2 text-sm text-ink-700">
+            <li class="flex gap-3"><span class="text-ink-300 num">—</span> Mașini de tăiere laser fibră</li>
+            <li class="flex gap-3"><span class="text-ink-300 num">—</span> Centre CNC & strunguri</li>
+            <li class="flex gap-3"><span class="text-ink-300 num">—</span> Brațe robotice de sudură</li>
+          </ul>
+        </div>
+        <div class="lg:col-span-3 lg:border-l hairline lg:pl-8">
+          <div class="text-xs uppercase tracking-[0.2em] text-ink-400 mb-3">Pachet recomandat</div>
+          <div class="serif text-2xl text-ink-900">UZX-Manufacturing</div>
+          <a href="#" class="text-xs text-ink-700 underline-link mt-4 inline-block">Vezi detalii →</a>
+        </div>
+      </div>
+
+      <!-- SOLUTION 2 — Logistică & depozitare -->
+      <div class="bg-white grid lg:grid-cols-12 gap-12 p-10 lg:p-16 items-center">
+        <div class="lg:col-span-3">
+          <div class="aspect-[4/3] overflow-hidden bg-ink-100">
+            <img src="https://images.unsplash.com/photo-1553413077-190dd305871c?w=600&q=80&auto=format&fit=crop"
+                 alt="Depozit logistic cu motostivuitoare" class="w-full h-full object-cover grayscale-[30%]">
+          </div>
+        </div>
+        <div class="lg:col-span-1">
+          <div class="serif text-2xl text-ink-300 num">02</div>
+        </div>
+        <div class="lg:col-span-4">
+          <div class="text-xs uppercase tracking-[0.2em] text-ink-400 mb-3">Industrie</div>
+          <h3 class="serif text-3xl text-ink-900 leading-tight">Logistică &<br>depozitare</h3>
+          <p class="text-ink-600 leading-relaxed mt-4">
+            Echipamente complete pentru centre de distribuție și depozite e-commerce: manipulare, paletizare, sortare automată și soluții de depozitare verticală.
+          </p>
+          <ul class="mt-6 space-y-2 text-sm text-ink-700">
+            <li class="flex gap-3"><span class="text-ink-300 num">—</span> Motostivuitoare electrice & diesel</li>
+            <li class="flex gap-3"><span class="text-ink-300 num">—</span> Linii automate de paletizare</li>
+            <li class="flex gap-3"><span class="text-ink-300 num">—</span> Sisteme de rafturi industriale</li>
+          </ul>
+        </div>
+        <div class="lg:col-span-3 lg:border-l hairline lg:pl-8">
+          <div class="text-xs uppercase tracking-[0.2em] text-ink-400 mb-3">Pachet recomandat</div>
+          <div class="serif text-2xl text-ink-900">UZX-Logistics</div>
+          <a href="#" class="text-xs text-ink-700 underline-link mt-4 inline-block">Vezi detalii →</a>
+        </div>
+      </div>
+
+      <!-- SOLUTION 3 — Energie & infrastructură -->
+      <div class="bg-white grid lg:grid-cols-12 gap-12 p-10 lg:p-16 items-center">
+        <div class="lg:col-span-3">
+          <div class="aspect-[4/3] overflow-hidden bg-ink-100">
+            <img src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=600&q=80&auto=format&fit=crop"
+                 alt="Infrastructură energetică & turbine" class="w-full h-full object-cover grayscale-[30%]">
+          </div>
+        </div>
+        <div class="lg:col-span-1">
+          <div class="serif text-2xl text-ink-300 num">03</div>
+        </div>
+        <div class="lg:col-span-4">
+          <div class="text-xs uppercase tracking-[0.2em] text-ink-400 mb-3">Industrie</div>
+          <h3 class="serif text-3xl text-ink-900 leading-tight">Energie &<br>infrastructură</h3>
+          <p class="text-ink-600 leading-relaxed mt-4">
+            Utilaje grele și echipamente energetice pentru proiecte de infrastructură mare: termo, eolian, hidro, transport energie și exploatări miniere.
+          </p>
+          <ul class="mt-6 space-y-2 text-sm text-ink-700">
+            <li class="flex gap-3"><span class="text-ink-300 num">—</span> Macarale & utilaje de ridicare</li>
+            <li class="flex gap-3"><span class="text-ink-300 num">—</span> Generatoare & echipamente energetice</li>
+            <li class="flex gap-3"><span class="text-ink-300 num">—</span> Excavatoare grele heavy-duty</li>
+          </ul>
+        </div>
+        <div class="lg:col-span-3 lg:border-l hairline lg:pl-8">
+          <div class="text-xs uppercase tracking-[0.2em] text-ink-400 mb-3">Pachet recomandat</div>
+          <div class="serif text-2xl text-ink-900">UZX-Energy</div>
+          <a href="#" class="text-xs text-ink-700 underline-link mt-4 inline-block">Vezi detalii →</a>
+        </div>
+      </div>
+
+      <!-- SOLUTION 4 — Procesare & reciclare -->
+      <div class="bg-white grid lg:grid-cols-12 gap-12 p-10 lg:p-16 items-center">
+        <div class="lg:col-span-3">
+          <div class="aspect-[4/3] overflow-hidden bg-ink-100">
+            <img src="https://images.unsplash.com/photo-1611284446314-60a58ac0deb9?w=600&q=80&auto=format&fit=crop"
+                 alt="Linie de reciclare materiale" class="w-full h-full object-cover grayscale-[30%]">
+          </div>
+        </div>
+        <div class="lg:col-span-1">
+          <div class="serif text-2xl text-ink-300 num">04</div>
+        </div>
+        <div class="lg:col-span-4">
+          <div class="text-xs uppercase tracking-[0.2em] text-ink-400 mb-3">Industrie</div>
+          <h3 class="serif text-3xl text-ink-900 leading-tight">Procesare &<br>reciclare</h3>
+          <p class="text-ink-600 leading-relaxed mt-4">
+            Linii complete pentru reciclare deșeuri, ambalare, etichetare și dozare. Soluții turnkey pentru fabrici de procesare materiale și economie circulară.
+          </p>
+          <ul class="mt-6 space-y-2 text-sm text-ink-700">
+            <li class="flex gap-3"><span class="text-ink-300 num">—</span> Linii de sortare & granulare</li>
+            <li class="flex gap-3"><span class="text-ink-300 num">—</span> Mașini de ambalare automată</li>
+            <li class="flex gap-3"><span class="text-ink-300 num">—</span> Sisteme de etichetare & dozare</li>
+          </ul>
+        </div>
+        <div class="lg:col-span-3 lg:border-l hairline lg:pl-8">
+          <div class="text-xs uppercase tracking-[0.2em] text-ink-400 mb-3">Pachet recomandat</div>
+          <div class="serif text-2xl text-ink-900">UZX-Process</div>
+          <a href="#" class="text-xs text-ink-700 underline-link mt-4 inline-block">Vezi detalii →</a>
+        </div>
+      </div>
+
+      <!-- SOLUTION 5 — Auto & metalurgie -->
+      <div class="bg-white grid lg:grid-cols-12 gap-12 p-10 lg:p-16 items-center">
+        <div class="lg:col-span-3">
+          <div class="aspect-[4/3] overflow-hidden bg-ink-100">
+            <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=600&q=80&auto=format&fit=crop"
+                 alt="Robot automotive în uzină" class="w-full h-full object-cover grayscale-[30%]">
+          </div>
+        </div>
+        <div class="lg:col-span-1">
+          <div class="serif text-2xl text-ink-300 num">05</div>
+        </div>
+        <div class="lg:col-span-4">
+          <div class="text-xs uppercase tracking-[0.2em] text-ink-400 mb-3">Industrie</div>
+          <h3 class="serif text-3xl text-ink-900 leading-tight">Auto &<br>metalurgie</h3>
+          <p class="text-ink-600 leading-relaxed mt-4">
+            Echipamente pentru industria auto și prelucrarea metalelor: linii de asamblare robotizate, presse, sudură automată și control dimensional.
+          </p>
+          <ul class="mt-6 space-y-2 text-sm text-ink-700">
+            <li class="flex gap-3"><span class="text-ink-300 num">—</span> Celule robotice de sudură</li>
+            <li class="flex gap-3"><span class="text-ink-300 num">—</span> Mașini de inspecție 3D</li>
+            <li class="flex gap-3"><span class="text-ink-300 num">—</span> Linii de asamblare modulare</li>
+          </ul>
+        </div>
+        <div class="lg:col-span-3 lg:border-l hairline lg:pl-8">
+          <div class="text-xs uppercase tracking-[0.2em] text-ink-400 mb-3">Pachet recomandat</div>
+          <div class="serif text-2xl text-ink-900">UZX-Automotive</div>
+          <a href="#" class="text-xs text-ink-700 underline-link mt-4 inline-block">Vezi detalii →</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="flex justify-center mt-16">
+      <a href="#contact" class="bg-uzx-blue hover:bg-uzx-blue2 text-white text-sm px-7 py-4 inline-flex items-center gap-3 group transition">
+        Solicită o recomandare personalizată
+        <span class="group-hover:translate-x-1 transition">→</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════ -->
+<!-- TESTIMONIALE                          -->
+<!-- ════════════════════════════════════ -->
+<section id="testimoniale" class="border-b hairline py-24 lg:py-32 bg-ink-900 text-white">
+  <div class="container-x">
+    <div class="grid lg:grid-cols-12 gap-12 mb-16">
+      <div class="lg:col-span-6">
+        <div class="text-xs uppercase tracking-[0.2em] text-ink-400 mb-4">03 / Referințe</div>
+        <h2 class="serif text-4xl md:text-5xl lg:text-6xl tracking-tightest leading-[0.95]">
+          Spun ei,<br><span class="italic text-ink-400">nu noi.</span>
+        </h2>
+      </div>
+    </div>
+
+    <div class="grid lg:grid-cols-12 gap-8 lg:gap-12 items-start">
+      <!-- Side info -->
+      <div class="lg:col-span-3">
+        <div class="text-xs text-ink-400 num mb-6 mono">— 12 referințe verificate</div>
+        <p class="text-ink-300 leading-relaxed text-sm">
+          Peste 5.000 de companii din producție, logistică și industrie au ales Uzinex ca partener strategic.
+        </p>
+        <a href="#" class="mt-8 inline-flex items-center gap-3 text-sm text-white border-b border-white/30 hover:border-white pb-1 group">
+          Toate referințele
+          <span class="group-hover:translate-x-1 transition">→</span>
+        </a>
+      </div>
+
+      <!-- 3 vertical marquee columns -->
+      <div class="lg:col-span-9 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 testimonial-mask" style="height:640px; overflow:hidden;">
+
+        <!-- COL 1 — slow up -->
+        <div class="scroll-col">
+          <div class="scroll-y-slow flex flex-col gap-6">
+            <!-- card -->
+            <div class="bg-ink-800 border border-ink-700 p-6">
+              <div class="text-uzx-orange text-sm tracking-widest mb-4">★★★★★</div>
+              <blockquote class="serif text-base leading-relaxed text-white/90 mb-6">„Linia robotizată de paletizare ne-a redus costurile cu 38% în primul an. Implementarea a fost impecabilă."</blockquote>
+              <div class="pt-4 border-t border-ink-700">
+                <div class="serif text-sm text-white">Andrei Popescu</div>
+                <div class="text-[11px] text-ink-400 mt-0.5">Plant Manager · Auto Components SRL</div>
+              </div>
+            </div>
+            <div class="bg-ink-800 border border-ink-700 p-6">
+              <div class="text-uzx-orange text-sm tracking-widest mb-4">★★★★★</div>
+              <blockquote class="serif text-base leading-relaxed text-white/90 mb-6">„Am echipat 3 depozite cu motostivuitoare Uzinex. Service-ul este disponibil 24/7."</blockquote>
+              <div class="pt-4 border-t border-ink-700">
+                <div class="serif text-sm text-white">Daniela Marin</div>
+                <div class="text-[11px] text-ink-400 mt-0.5">Procurement · LogiPark România</div>
+              </div>
+            </div>
+            <div class="bg-ink-800 border border-ink-700 p-6">
+              <div class="text-uzx-orange text-sm tracking-widest mb-4">★★★★★</div>
+              <blockquote class="serif text-base leading-relaxed text-white/90 mb-6">„Centrul CNC achiziționat lucrează 2 schimburi zilnic de 4 ani fără o singură defecțiune majoră."</blockquote>
+              <div class="pt-4 border-t border-ink-700">
+                <div class="serif text-sm text-white">Bogdan Stan</div>
+                <div class="text-[11px] text-ink-400 mt-0.5">Director Producție · MetalTech</div>
+              </div>
+            </div>
+            <div class="bg-ink-800 border border-ink-700 p-6">
+              <div class="text-uzx-orange text-sm tracking-widest mb-4">★★★★★</div>
+              <blockquote class="serif text-base leading-relaxed text-white/90 mb-6">„Echipa de ingineri Uzinex ne-a ajutat să dimensionăm corect toată linia de producție."</blockquote>
+              <div class="pt-4 border-t border-ink-700">
+                <div class="serif text-sm text-white">Adrian Tudor</div>
+                <div class="text-[11px] text-ink-400 mt-0.5">CTO · Pack Industries</div>
+              </div>
+            </div>
+            <!-- duplicate -->
+            <div class="bg-ink-800 border border-ink-700 p-6">
+              <div class="text-uzx-orange text-sm tracking-widest mb-4">★★★★★</div>
+              <blockquote class="serif text-base leading-relaxed text-white/90 mb-6">„Linia robotizată de paletizare ne-a redus costurile cu 38% în primul an. Implementarea a fost impecabilă."</blockquote>
+              <div class="pt-4 border-t border-ink-700">
+                <div class="serif text-sm text-white">Andrei Popescu</div>
+                <div class="text-[11px] text-ink-400 mt-0.5">Plant Manager · Auto Components SRL</div>
+              </div>
+            </div>
+            <div class="bg-ink-800 border border-ink-700 p-6">
+              <div class="text-uzx-orange text-sm tracking-widest mb-4">★★★★★</div>
+              <blockquote class="serif text-base leading-relaxed text-white/90 mb-6">„Am echipat 3 depozite cu motostivuitoare Uzinex. Service-ul este disponibil 24/7."</blockquote>
+              <div class="pt-4 border-t border-ink-700">
+                <div class="serif text-sm text-white">Daniela Marin</div>
+                <div class="text-[11px] text-ink-400 mt-0.5">Procurement · LogiPark România</div>
+              </div>
+            </div>
+            <div class="bg-ink-800 border border-ink-700 p-6">
+              <div class="text-uzx-orange text-sm tracking-widest mb-4">★★★★★</div>
+              <blockquote class="serif text-base leading-relaxed text-white/90 mb-6">„Centrul CNC achiziționat lucrează 2 schimburi zilnic de 4 ani fără o singură defecțiune majoră."</blockquote>
+              <div class="pt-4 border-t border-ink-700">
+                <div class="serif text-sm text-white">Bogdan Stan</div>
+                <div class="text-[11px] text-ink-400 mt-0.5">Director Producție · MetalTech</div>
+              </div>
+            </div>
+            <div class="bg-ink-800 border border-ink-700 p-6">
+              <div class="text-uzx-orange text-sm tracking-widest mb-4">★★★★★</div>
+              <blockquote class="serif text-base leading-relaxed text-white/90 mb-6">„Echipa de ingineri Uzinex ne-a ajutat să dimensionăm corect toată linia de producție."</blockquote>
+              <div class="pt-4 border-t border-ink-700">
+                <div class="serif text-sm text-white">Adrian Tudor</div>
+                <div class="text-[11px] text-ink-400 mt-0.5">CTO · Pack Industries</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- COL 2 — mid up, offset start -->
+        <div class="scroll-col hidden md:block">
+          <div class="scroll-y-mid flex flex-col gap-6" style="margin-top:-120px;">
+            <div class="bg-ink-800 border border-ink-700 p-6">
+              <div class="text-uzx-orange text-sm tracking-widest mb-4">★★★★★</div>
+              <blockquote class="serif text-base leading-relaxed text-white/90 mb-6">„Mașina de tăiere laser livrată în 3 săptămâni. Calitatea suprafețelor de tăiere este excepțională."</blockquote>
+              <div class="pt-4 border-t border-ink-700">
+                <div class="serif text-sm text-white">Mihai Constantin</div>
+                <div class="text-[11px] text-ink-400 mt-0.5">Director · Laser Cut Pro</div>
+              </div>
+            </div>
+            <div class="bg-ink-800 border border-ink-700 p-6">
+              <div class="text-uzx-orange text-sm tracking-widest mb-4">★★★★★</div>
+              <blockquote class="serif text-base leading-relaxed text-white/90 mb-6">„Sistemul de leasing pentru utilajele grele a fost aprobat în 36 de ore. Recomand cu încredere."</blockquote>
+              <div class="pt-4 border-t border-ink-700">
+                <div class="serif text-sm text-white">Laura Dumitrescu</div>
+                <div class="text-[11px] text-ink-400 mt-0.5">CFO · Terra Energy</div>
+              </div>
+            </div>
+            <div class="bg-ink-800 border border-ink-700 p-6">
+              <div class="text-uzx-orange text-sm tracking-widest mb-4">★★★★★</div>
+              <blockquote class="serif text-base leading-relaxed text-white/90 mb-6">„Cele 4 brațe robotice de sudură au transformat complet linia noastră. ROI în 14 luni."</blockquote>
+              <div class="pt-4 border-t border-ink-700">
+                <div class="serif text-sm text-white">Cristian Ionescu</div>
+                <div class="text-[11px] text-ink-400 mt-0.5">Operations · WeldMaster Industries</div>
+              </div>
+            </div>
+            <div class="bg-ink-800 border border-ink-700 p-6">
+              <div class="text-uzx-orange text-sm tracking-widest mb-4">★★★★★</div>
+              <blockquote class="serif text-base leading-relaxed text-white/90 mb-6">„Piese de schimb originale, livrate next-day din Otopeni. Zero downtime în ultimii 2 ani."</blockquote>
+              <div class="pt-4 border-t border-ink-700">
+                <div class="serif text-sm text-white">Vlad Marinescu</div>
+                <div class="text-[11px] text-ink-400 mt-0.5">Maintenance · Heavy Lift Co.</div>
+              </div>
+            </div>
+            <!-- duplicate -->
+            <div class="bg-ink-800 border border-ink-700 p-6">
+              <div class="text-uzx-orange text-sm tracking-widest mb-4">★★★★★</div>
+              <blockquote class="serif text-base leading-relaxed text-white/90 mb-6">„Mașina de tăiere laser livrată în 3 săptămâni. Calitatea suprafețelor de tăiere este excepțională."</blockquote>
+              <div class="pt-4 border-t border-ink-700">
+                <div class="serif text-sm text-white">Mihai Constantin</div>
+                <div class="text-[11px] text-ink-400 mt-0.5">Director · Laser Cut Pro</div>
+              </div>
+            </div>
+            <div class="bg-ink-800 border border-ink-700 p-6">
+              <div class="text-uzx-orange text-sm tracking-widest mb-4">★★★★★</div>
+              <blockquote class="serif text-base leading-relaxed text-white/90 mb-6">„Sistemul de leasing pentru utilajele grele a fost aprobat în 36 de ore. Recomand cu încredere."</blockquote>
+              <div class="pt-4 border-t border-ink-700">
+                <div class="serif text-sm text-white">Laura Dumitrescu</div>
+                <div class="text-[11px] text-ink-400 mt-0.5">CFO · Terra Energy</div>
+              </div>
+            </div>
+            <div class="bg-ink-800 border border-ink-700 p-6">
+              <div class="text-uzx-orange text-sm tracking-widest mb-4">★★★★★</div>
+              <blockquote class="serif text-base leading-relaxed text-white/90 mb-6">„Cele 4 brațe robotice de sudură au transformat complet linia noastră. ROI în 14 luni."</blockquote>
+              <div class="pt-4 border-t border-ink-700">
+                <div class="serif text-sm text-white">Cristian Ionescu</div>
+                <div class="text-[11px] text-ink-400 mt-0.5">Operations · WeldMaster Industries</div>
+              </div>
+            </div>
+            <div class="bg-ink-800 border border-ink-700 p-6">
+              <div class="text-uzx-orange text-sm tracking-widest mb-4">★★★★★</div>
+              <blockquote class="serif text-base leading-relaxed text-white/90 mb-6">„Piese de schimb originale, livrate next-day din Otopeni. Zero downtime în ultimii 2 ani."</blockquote>
+              <div class="pt-4 border-t border-ink-700">
+                <div class="serif text-sm text-white">Vlad Marinescu</div>
+                <div class="text-[11px] text-ink-400 mt-0.5">Maintenance · Heavy Lift Co.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- COL 3 — fast up -->
+        <div class="scroll-col hidden lg:block">
+          <div class="scroll-y-fast flex flex-col gap-6" style="margin-top:-60px;">
+            <div class="bg-ink-800 border border-ink-700 p-6">
+              <div class="text-uzx-orange text-sm tracking-widest mb-4">★★★★★</div>
+              <blockquote class="serif text-base leading-relaxed text-white/90 mb-6">„Linia de ambalare automată a triplat capacitatea fabricii. Investiție amortizată în 18 luni."</blockquote>
+              <div class="pt-4 border-t border-ink-700">
+                <div class="serif text-sm text-white">Ana Petrescu</div>
+                <div class="text-[11px] text-ink-400 mt-0.5">CEO · BioPack Solutions</div>
+              </div>
+            </div>
+            <div class="bg-ink-800 border border-ink-700 p-6">
+              <div class="text-uzx-orange text-sm tracking-widest mb-4">★★★★★</div>
+              <blockquote class="serif text-base leading-relaxed text-white/90 mb-6">„Lucrăm cu Uzinex de 11 ani. Singurul furnizor în care avem încredere oarbă."</blockquote>
+              <div class="pt-4 border-t border-ink-700">
+                <div class="serif text-sm text-white">Răzvan Dima</div>
+                <div class="text-[11px] text-ink-400 mt-0.5">Owner · Mecanica Grup</div>
+              </div>
+            </div>
+            <div class="bg-ink-800 border border-ink-700 p-6">
+              <div class="text-uzx-orange text-sm tracking-widest mb-4">★★★★★</div>
+              <blockquote class="serif text-base leading-relaxed text-white/90 mb-6">„Echipamente de inspecție industrială perfecte pentru linia noastră de control calitate."</blockquote>
+              <div class="pt-4 border-t border-ink-700">
+                <div class="serif text-sm text-white">Ioana Gheorghiu</div>
+                <div class="text-[11px] text-ink-400 mt-0.5">QA Director · Precision Parts</div>
+              </div>
+            </div>
+            <div class="bg-ink-800 border border-ink-700 p-6">
+              <div class="text-uzx-orange text-sm tracking-widest mb-4">★★★★★</div>
+              <blockquote class="serif text-base leading-relaxed text-white/90 mb-6">„Generatorul industrial livrat și pus în funcțiune în 5 zile. Continuitate operațională asigurată."</blockquote>
+              <div class="pt-4 border-t border-ink-700">
+                <div class="serif text-sm text-white">Sorin Vasile</div>
+                <div class="text-[11px] text-ink-400 mt-0.5">Facility Manager · DataCenter One</div>
+              </div>
+            </div>
+            <!-- duplicate -->
+            <div class="bg-ink-800 border border-ink-700 p-6">
+              <div class="text-uzx-orange text-sm tracking-widest mb-4">★★★★★</div>
+              <blockquote class="serif text-base leading-relaxed text-white/90 mb-6">„Linia de ambalare automată a triplat capacitatea fabricii. Investiție amortizată în 18 luni."</blockquote>
+              <div class="pt-4 border-t border-ink-700">
+                <div class="serif text-sm text-white">Ana Petrescu</div>
+                <div class="text-[11px] text-ink-400 mt-0.5">CEO · BioPack Solutions</div>
+              </div>
+            </div>
+            <div class="bg-ink-800 border border-ink-700 p-6">
+              <div class="text-uzx-orange text-sm tracking-widest mb-4">★★★★★</div>
+              <blockquote class="serif text-base leading-relaxed text-white/90 mb-6">„Lucrăm cu Uzinex de 11 ani. Singurul furnizor în care avem încredere oarbă."</blockquote>
+              <div class="pt-4 border-t border-ink-700">
+                <div class="serif text-sm text-white">Răzvan Dima</div>
+                <div class="text-[11px] text-ink-400 mt-0.5">Owner · Mecanica Grup</div>
+              </div>
+            </div>
+            <div class="bg-ink-800 border border-ink-700 p-6">
+              <div class="text-uzx-orange text-sm tracking-widest mb-4">★★★★★</div>
+              <blockquote class="serif text-base leading-relaxed text-white/90 mb-6">„Echipamente de inspecție industrială perfecte pentru linia noastră de control calitate."</blockquote>
+              <div class="pt-4 border-t border-ink-700">
+                <div class="serif text-sm text-white">Ioana Gheorghiu</div>
+                <div class="text-[11px] text-ink-400 mt-0.5">QA Director · Precision Parts</div>
+              </div>
+            </div>
+            <div class="bg-ink-800 border border-ink-700 p-6">
+              <div class="text-uzx-orange text-sm tracking-widest mb-4">★★★★★</div>
+              <blockquote class="serif text-base leading-relaxed text-white/90 mb-6">„Generatorul industrial livrat și pus în funcțiune în 5 zile. Continuitate operațională asigurată."</blockquote>
+              <div class="pt-4 border-t border-ink-700">
+                <div class="serif text-sm text-white">Sorin Vasile</div>
+                <div class="text-[11px] text-ink-400 mt-0.5">Facility Manager · DataCenter One</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════ -->
+<!-- Q&A                                   -->
+<!-- ════════════════════════════════════ -->
+<section id="qa" class="border-b hairline py-24 lg:py-32">
+  <div class="container-x grid lg:grid-cols-12 gap-12">
+    <div class="lg:col-span-4">
+      <div class="text-xs uppercase tracking-[0.2em] text-ink-400 mb-4">04 / Întrebări</div>
+      <h2 class="serif text-4xl md:text-5xl lg:text-6xl tracking-tightest text-ink-900 leading-[0.95]">
+        Întrebări<br>frecvente.
+      </h2>
+      <p class="text-ink-500 mt-8 leading-relaxed max-w-sm">
+        Răspunsuri la cele mai comune întrebări tehnice și comerciale. Nu găsești ce cauți?
+      </p>
+      <a href="#contact" class="text-sm text-ink-700 underline-link mt-6 inline-block">Contactează echipa →</a>
+    </div>
+
+    <div class="lg:col-span-7 lg:col-start-6 border-t hairline">
+      <details class="border-b hairline group">
+        <summary class="flex items-center justify-between py-6 lg:py-8">
+          <span class="serif text-xl lg:text-2xl text-ink-900 pr-8">Cât durează livrarea în România?</span>
+          <span class="qa-icon text-2xl text-ink-400 font-light">+</span>
+        </summary>
+        <div class="pb-8 text-ink-500 leading-relaxed max-w-2xl">
+          Termenul de livrare se confirmă individual pentru fiecare proiect, în funcție de configurația și complexitatea echipamentului. Pentru soluții standard livrăm rapid în întreaga țară, iar pentru proiectele custom inginerii noștri îți propun un calendar realist.
+        </div>
+      </details>
+
+      <details class="border-b hairline">
+        <summary class="flex items-center justify-between py-6 lg:py-8">
+          <span class="serif text-xl lg:text-2xl text-ink-900 pr-8">Ce garanție oferiți pentru produse?</span>
+          <span class="qa-icon text-2xl text-ink-400 font-light">+</span>
+        </summary>
+        <div class="pb-8 text-ink-500 leading-relaxed max-w-2xl">
+          Toate produsele Uzinex beneficiază de garanție extinsă de 24 de luni pentru defecte de fabricație. Pentru produsele realizate la comandă, garanția este de 12 luni. Reparațiile în garanție sunt efectuate gratuit, inclusiv transportul.
+        </div>
+      </details>
+
+      <details class="border-b hairline">
+        <summary class="flex items-center justify-between py-6 lg:py-8">
+          <span class="serif text-xl lg:text-2xl text-ink-900 pr-8">Pot comanda o cupă după desen propriu?</span>
+          <span class="qa-icon text-2xl text-ink-400 font-light">+</span>
+        </summary>
+        <div class="pb-8 text-ink-500 leading-relaxed max-w-2xl">
+          Da. Realizăm cupe și atașamente la comandă, conform desenelor și specificațiilor furnizate. Inginerii noștri pot, de asemenea, dezvolta soluții complete pornind de la cerințele tale tehnice. Proiectul include validare 3D înainte de fabricație.
+        </div>
+      </details>
+
+      <details class="border-b hairline">
+        <summary class="flex items-center justify-between py-6 lg:py-8">
+          <span class="serif text-xl lg:text-2xl text-ink-900 pr-8">Ce metode de plată acceptați?</span>
+          <span class="qa-icon text-2xl text-ink-400 font-light">+</span>
+        </summary>
+        <div class="pb-8 text-ink-500 leading-relaxed max-w-2xl">
+          Acceptăm transfer bancar, plată în rate prin parteneri de leasing și finanțare pentru companii cu istoric. Pentru clienții noi, putem oferi termene de plată flexibile după evaluarea financiară.
+        </div>
+      </details>
+
+      <details class="border-b hairline">
+        <summary class="flex items-center justify-between py-6 lg:py-8">
+          <span class="serif text-xl lg:text-2xl text-ink-900 pr-8">Sunt produsele compatibile cu utilajul meu?</span>
+          <span class="qa-icon text-2xl text-ink-400 font-light">+</span>
+        </summary>
+        <div class="pb-8 text-ink-500 leading-relaxed max-w-2xl">
+          Lucrăm cu echipamente compatibile cu majoritatea brandurilor de pe piață: Caterpillar, Komatsu, Volvo, Hitachi, JCB, Liebherr, Case, Doosan, Hyundai și Bobcat. Ne poți trimite seria utilajului și inginerii noștri îți confirmă compatibilitatea.
+        </div>
+      </details>
+
+      <details class="border-b hairline">
+        <summary class="flex items-center justify-between py-6 lg:py-8">
+          <span class="serif text-xl lg:text-2xl text-ink-900 pr-8">Oferiți consultanță tehnică gratuită?</span>
+          <span class="qa-icon text-2xl text-ink-400 font-light">+</span>
+        </summary>
+        <div class="pb-8 text-ink-500 leading-relaxed max-w-2xl">
+          Da. Echipa noastră de ingineri oferă consultanță gratuită pentru selecția corectă a echipamentelor, dimensionarea atașamentelor și optimizarea costurilor de exploatare. Sunăm sau ne vizităm clienții la fața locului.
+        </div>
+      </details>
+
+      <details class="border-b hairline">
+        <summary class="flex items-center justify-between py-6 lg:py-8">
+          <span class="serif text-xl lg:text-2xl text-ink-900 pr-8">Cum funcționează leasingul prin Uzinex?</span>
+          <span class="qa-icon text-2xl text-ink-400 font-light">+</span>
+        </summary>
+        <div class="pb-8 text-ink-500 leading-relaxed max-w-2xl">
+          Lucrăm cu cele mai mari instituții de leasing din România. Avans de la 10%, perioade între 12 și 60 de luni, dobânzi de la 4.9%. Pre-aprobarea vine în 48 de ore lucrătoare după depunerea documentelor.
+        </div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════ -->
+<!-- CTA FINAL                             -->
+<!-- ════════════════════════════════════ -->
+<section id="contact" class="border-b hairline py-24 lg:py-32">
+  <div class="container-x grid lg:grid-cols-12 gap-12">
+    <div class="lg:col-span-7">
+      <div class="text-xs uppercase tracking-[0.2em] text-ink-400 mb-4">05 / Contact</div>
+      <h2 class="serif text-5xl md:text-6xl lg:text-7xl tracking-tightest text-ink-900 leading-[0.92]">
+        Construim împreună<br>următorul tău <span class="italic text-ink-500">proiect.</span>
+      </h2>
+      <p class="text-ink-500 text-lg max-w-xl mt-8 leading-relaxed">
+        Contactează echipa noastră și primești o ofertă personalizată în maxim 24 de ore lucrătoare.
+      </p>
+    </div>
+    <div class="lg:col-span-4 lg:col-start-9 space-y-8">
+      <div>
+        <div class="text-xs uppercase tracking-[0.2em] text-ink-400 mb-3">Telefon</div>
+        <a href="tel:+40000000000" class="serif text-2xl text-ink-900 hover:text-ink-600 transition">+40 21 000 0000</a>
+      </div>
+      <div>
+        <div class="text-xs uppercase tracking-[0.2em] text-ink-400 mb-3">Email</div>
+        <a href="mailto:contact@uzinex.ro" class="serif text-2xl text-ink-900 hover:text-ink-600 transition">contact@uzinex.ro</a>
+      </div>
+      <div>
+        <div class="text-xs uppercase tracking-[0.2em] text-ink-400 mb-3">Sediu</div>
+        <div class="text-ink-700">Șos. București-Ploiești, km 12<br>Otopeni, jud. Ilfov</div>
+      </div>
+      <a href="#" class="bg-uzx-blue hover:bg-uzx-blue2 text-white text-sm px-7 py-4 inline-flex items-center gap-3 group transition">
+        Discută cu un inginer
+        <span class="group-hover:translate-x-1 transition">→</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ─── FOOTER ─── -->
+<footer class="bg-ink-50">
+  <div class="container-x py-20">
+    <div class="grid md:grid-cols-2 lg:grid-cols-12 gap-12 mb-20">
+      <div class="lg:col-span-4">
+        <svg viewBox="0 0 320 70" class="h-10 w-auto" xmlns="http://www.w3.org/2000/svg" aria-label="Uzinex">
+          <g fill="#1e6bb8">
+            <path d="M0 4 L18 4 L18 38 Q18 46 26 46 Q34 46 34 38 L34 4 L52 4 L52 39 Q52 60 26 60 Q0 60 0 39 Z"/>
+            <path d="M58 4 L106 4 L106 16 L80 46 L106 46 L106 58 L58 58 L58 46 L84 16 L58 16 Z"/>
+            <rect x="112" y="4" width="16" height="54"/>
+            <path d="M134 4 L150 4 L168 32 L168 4 L184 4 L184 58 L168 58 L150 30 L150 58 L134 58 Z"/>
+            <path d="M190 4 L230 4 L230 16 L206 16 L206 24 L226 24 L226 36 L206 36 L206 46 L230 46 L230 58 L190 58 Z"/>
+          </g>
+          <g fill="#f5851f">
+            <path d="M236 4 L254 4 L264 22 L274 4 L292 4 L274 30 L294 58 L276 58 L264 38 L252 58 L234 58 L254 30 Z"/>
+          </g>
+          <text x="0" y="69" font-family="Inter, sans-serif" font-size="9" font-weight="400" fill="#1e6bb8" letter-spacing="0.5">
+            utilaje &amp; echipamente pentru industrie
+          </text>
+        </svg>
+        <p class="text-ink-500 text-sm mt-6 max-w-xs leading-relaxed">
+          Echipamente industriale, cupe de excavator și soluții de leasing pentru profesioniștii din construcții. Din 2003.
+        </p>
+      </div>
+      <div class="lg:col-span-2">
+        <div class="text-xs uppercase tracking-[0.2em] text-ink-400 mb-5">Catalog</div>
+        <ul class="space-y-3 text-sm text-ink-700">
+          <li><a class="hover:text-ink-900" href="#">Cupe excavator</a></li>
+          <li><a class="hover:text-ink-900" href="#">Atașamente</a></li>
+          <li><a class="hover:text-ink-900" href="#">Piese uzură</a></li>
+          <li><a class="hover:text-ink-900" href="#">Cuple rapide</a></li>
+        </ul>
+      </div>
+      <div class="lg:col-span-2">
+        <div class="text-xs uppercase tracking-[0.2em] text-ink-400 mb-5">Companie</div>
+        <ul class="space-y-3 text-sm text-ink-700">
+          <li><a class="hover:text-ink-900" href="#">Despre noi</a></li>
+          <li><a class="hover:text-ink-900" href="#">Cariere</a></li>
+          <li><a class="hover:text-ink-900" href="#">Resurse</a></li>
+          <li><a class="hover:text-ink-900" href="#">Contact</a></li>
+        </ul>
+      </div>
+      <div class="lg:col-span-2">
+        <div class="text-xs uppercase tracking-[0.2em] text-ink-400 mb-5">Legal</div>
+        <ul class="space-y-3 text-sm text-ink-700">
+          <li><a class="hover:text-ink-900" href="#">Termeni</a></li>
+          <li><a class="hover:text-ink-900" href="#">Confidențialitate</a></li>
+          <li><a class="hover:text-ink-900" href="#">Cookies</a></li>
+          <li><a class="hover:text-ink-900" href="#">GDPR</a></li>
+        </ul>
+      </div>
+      <div class="lg:col-span-2">
+        <div class="text-xs uppercase tracking-[0.2em] text-ink-400 mb-5">Newsletter</div>
+        <p class="text-sm text-ink-500 mb-4">Noutăți și oferte lunare.</p>
+        <div class="flex border-b border-ink-300">
+          <input type="email" placeholder="Email" class="bg-transparent text-sm py-2 flex-1 focus:outline-none placeholder:text-ink-400">
+          <button class="text-ink-900 px-2">→</button>
+        </div>
+      </div>
+    </div>
+    <div class="flex flex-col md:flex-row justify-between items-center pt-10 border-t hairline text-xs text-ink-400">
+      <div>© 2026 Uzinex SRL · CUI RO 12345678</div>
+      <div class="mt-4 md:mt-0">Sediu social: București · Depozit: Otopeni</div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
