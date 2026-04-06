@@ -77,7 +77,9 @@
     mask-image: linear-gradient(to bottom, transparent 0%, black 12%, black 88%, transparent 100%);
     -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 12%, black 88%, transparent 100%);
   }
-  .scroll-col:hover { animation-play-state: paused; }
+  .scroll-col:hover .scroll-y-slow,
+  .scroll-col:hover .scroll-y-mid,
+  .scroll-col:hover .scroll-y-fast { animation-play-state: paused; }
 
   /* Hero blueprint animations */
   @keyframes spin       { 0% { transform: rotate(0deg); }   100% { transform: rotate(360deg); } }
@@ -206,8 +208,8 @@
       </defs>
 
       <!-- BIG GEAR right -->
-      <g transform="translate(1200,420)" class="gear-spin-slow">
-        <g>
+      <g transform="translate(1200,420)">
+        <g class="gear-spin-slow">
           <circle r="180" fill="none" stroke="#7fb0ff" stroke-width="1.5" opacity="0.5"/>
           <circle r="150" fill="none" stroke="#7fb0ff" stroke-width="1" opacity="0.4"/>
           <circle r="40"  fill="none" stroke="#7fb0ff" stroke-width="2"/>
@@ -236,8 +238,8 @@
       </g>
 
       <!-- MEDIUM GEAR -->
-      <g transform="translate(1430,200)" class="gear-spin-fast-rev">
-        <g>
+      <g transform="translate(1430,200)">
+        <g class="gear-spin-fast-rev">
           <circle r="90" fill="none" stroke="#7fb0ff" stroke-width="1.5" opacity="0.6"/>
           <circle r="20" fill="none" stroke="#7fb0ff" stroke-width="2"/>
           <circle r="4"  fill="#7fb0ff"/>
@@ -257,8 +259,8 @@
       </g>
 
       <!-- SMALL GEAR -->
-      <g transform="translate(1090,200)" class="gear-spin-fast">
-        <g>
+      <g transform="translate(1090,200)">
+        <g class="gear-spin-fast">
           <circle r="55" fill="none" stroke="#7fb0ff" stroke-width="1.5" opacity="0.6"/>
           <circle r="12" fill="none" stroke="#7fb0ff" stroke-width="1.5"/>
           <circle r="3"  fill="#7fb0ff"/>
